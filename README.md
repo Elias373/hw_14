@@ -1,7 +1,9 @@
-# Testing website SauceDemo
-[https://www.saucedemo.com/](https://www.saucedemo.com/)
+# SauceDemo Test Automation
 
-## Tech Stack
+> Automated UI testing for [SauceDemo](https://www.saucedemo.com/) - a demo e-commerce website
+
+## 🛠 Tech Stack
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=Selenium&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white)
@@ -24,14 +26,11 @@ SELENOID_URL=selenoid.autotests.cloud
 
 *The .env file is included in .gitignore to prevent accidentally committing credentials.*
 
-### Test Run Commands
+### Run Tests
 
 ```bash
 # Run all tests with Allure reporting
 pytest tests/ --alluredir=allure-results -v
-
-# Run specific test file
-pytest tests/test_simple_po.py -v
 
 # Run single test
 pytest tests/test_simple_po.py::test_successful_login -v
@@ -40,20 +39,15 @@ pytest tests/test_simple_po.py::test_successful_login -v
 allure serve allure-results
 ```
 
-## 📋 Test Scenarios
+## Test Scenarios
 
-1) Successful Login - Verify user can log in with valid credentials
-
-2) Add Item to Cart - Add specific product to cart and verify counter
-
-3) Navigation - Open About page and verify navigation works
-
-4) Logout - Successful user logout
-
-5) Failed Login - Error handling for invalid credentials
+✅ **Successful Login** - Verify user can log in with valid credentials  
+✅ **Add Item to Cart** - Add specific product to cart and verify counter  
+✅ **Navigation** - Open About page and verify navigation works  
+✅ **Logout** - Successful user logout  
+✅ **Failed Login** - Error handling for invalid credentials
 
 ### Report Examples
-
 
 #### Jenkins Build
 ![Jenkins Build](readme_media/jenkins_build.png)
@@ -66,3 +60,9 @@ allure serve allure-results
 
 #### Telegram Notification
 ![Telegram](readme_media/telegram_notification.png)
+
+## 👤 Author
+
+**Illia Karcheuski**
+
+[GitHub](https://github.com/Elias373) • [LinkedIn](https://pl.linkedin.com/in/ilyakorchevsky/ru)
