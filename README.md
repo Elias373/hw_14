@@ -39,7 +39,7 @@ pytest tests/test_simple_po.py::test_successful_login -v
 allure serve allure-results
 ```
 
-## Test Scenarios
+### Test Scenarios
 
 ✅ **Successful Login** - Verify user can log in with valid credentials  
 ✅ **Add Item to Cart** - Add specific product to cart and verify counter  
