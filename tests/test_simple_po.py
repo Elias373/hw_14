@@ -23,8 +23,13 @@ def test_add_item_to_cart():
         login.open().login('standard_user', 'secret_sauce')
     with allure.step("Add item to cart"):
         main.add_item_to_cart('add-to-cart-sauce-labs-backpack')
+    with allure.step("Verify cart"):
+        cart.open_cart()
+        browser.element('.title').should(have.text('Your Cart'))
+        cart.should_contain_item('Sauce Labs Backpack')
     with allure.step("Verify item count in cart"):
-        main.cart_should_have_count(1)
+        cart.should_have_items_count(1)
+
 
 @allure.title("Navigation")
 def test_navigation():

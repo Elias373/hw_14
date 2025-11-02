@@ -9,10 +9,6 @@ class MainPage:
         browser.element(f'#{item_id}').click()
         return self
 
-    def cart_should_have_count(self, count):
-        browser.element('.shopping_cart_badge').should(have.text(str(count)))
-        return self
-
     def open_about_page(self):
         browser.element('#react-burger-menu-btn').click()
         browser.element('#about_sidebar_link').click()
