@@ -33,7 +33,7 @@ SELENOID_URL=selenoid.autotests.cloud
 pytest tests/ --alluredir=allure-results -v
 
 # Run single test
-pytest tests/test_simple_po.py::test_successful_login -v
+pytest tests/simple_po.py::test_successful_login -v
 
 # View Allure report
 allure serve allure-results

@@ -4,8 +4,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selene import browser
 from dotenv import load_dotenv
-
 from utils import attach
+
 
 
 @pytest.fixture(scope='session', autouse=True)
@@ -13,13 +13,12 @@ def load_env():
     load_dotenv()
 
 
-@pytest.fixture(scope='function', autouse=True)
+@pytest.fixture(scope='function')
 def browser_setup():
     browser.config.base_url = 'https://www.saucedemo.com'
     browser.config.window_width = 1920
     browser.config.window_height = 1080
     browser.config.timeout = 10.0
-
 
     options = Options()
     options.set_capability("browserName", "chrome")
@@ -49,4 +48,15 @@ def browser_setup():
     attach.add_logs(browser)
     attach.add_video(browser)
 
+
     browser.quit()
+
+
+@pytest.fixture
+def authorized_user(browser_setup):
+    from pages.login_page import LoginPage
+    from pages.main_page import MainPage
+
+    login_page = LoginPage()
+    login_page.open().login('standard_user', 'secret_sauce')
+    return MainPage()
