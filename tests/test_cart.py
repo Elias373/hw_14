@@ -1,12 +1,16 @@
 import allure
 from selene import browser, have
+from pages.main_page import MainPage
 from pages.cart_page import CartPage
 
+main = MainPage()
 cart = CartPage()
+
 
 @allure.epic("Cart")
 class TestCart:
 
+    @allure.story("Add to Cart")
     @allure.title("Add Item to Cart")
     def test_add_item_to_cart(self, authorized_user):
         with allure.step("Perform Login"):
@@ -20,6 +24,7 @@ class TestCart:
         with allure.step("Verify item count in cart"):
             cart.should_have_items_count(1)
 
+    @allure.story("Remove from Cart")
     @allure.title("Remove Item from Cart")
     def test_remove_item_from_cart(self, authorized_user):
         with allure.step("Perform Login"):
@@ -31,6 +36,7 @@ class TestCart:
         with allure.step("Verify cart is empty"):
             cart.open_cart()
             cart.should_have_items_count(0)
+
 
 
 

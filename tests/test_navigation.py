@@ -1,14 +1,12 @@
 import allure
 from selene import browser, have
-
-import allure
-from selene import browser, have
 from pages.main_page import MainPage
 
 
 @allure.epic("Navigation")
 class TestNavigation:
 
+    @allure.story("Menu")
     @allure.title("Menu")
     def test_navigation(self, authorized_user):
         with allure.step("Perform Login"):
@@ -18,6 +16,7 @@ class TestNavigation:
         with allure.step("Verify about page opened"):
             browser.should(have.url_containing('saucelabs.com'))
 
+    @allure.story("Product Filtering")
     @allure.title("Product Filtering")
     def test_product_filtering(self, authorized_user):
         with allure.step("Perform Login"):

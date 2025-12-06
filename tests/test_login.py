@@ -10,6 +10,7 @@ main = MainPage()
 @allure.epic("Authentication")
 class TestAuth:
 
+    @allure.story("Login")
     @allure.title("Successful Login")
     def test_successful_login(self, browser_setup):
         with allure.step("Open login page"):
@@ -19,6 +20,7 @@ class TestAuth:
         with allure.step("Verify user is logged in"):
             main.should_be_loaded()
 
+    @allure.story("Login")
     @allure.title("Failed Login")
     def test_failed_login(self, browser_setup):
         with allure.step("Open login page"):
@@ -28,7 +30,8 @@ class TestAuth:
         with allure.step("Verify error message is shown"):
             login.should_have_error('Epic sadface: Username and password do not match any user in this service')
 
-    @allure.title("Logout")
+    @allure.story("Logout")
+    @allure.title("Successful Logout")
     def test_logout(self, authorized_user):
         with allure.step("Perform Login"):
             main = authorized_user
