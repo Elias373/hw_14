@@ -94,6 +94,10 @@ allure serve allure-results
 | Menu Navigation | ✅ PASS | Side menu functionality |
 | Product Filtering | ✅ PASS | Sort products by price |
 
+#### Test Execution Demo:
+
+![Text Example](readme_media/test_ex.gif)
+
 ---
 
 ### 📊 Report Examples
