@@ -1,11 +1,11 @@
-# 🚀 SauceDemo Test Automation
+# SauceDemo Test Automation
 
 > End-to-end automated testing framework for the demo e-commerce website  
 > [SauceDemo](https://www.saucedemo.com/)
 
 ---
 
-## Project Overview
+## 📋 Project Overview
 
 Professional test automation framework featuring:
 
@@ -33,7 +33,7 @@ Professional test automation framework featuring:
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 ### Installation
 ```bash
@@ -71,6 +71,7 @@ pytest tests/test_login.py::TestLogin::test_successful_login -v
 allure serve allure-results
 ```
 
+---
 
 ## ✅ Test Coverage
 
@@ -93,7 +94,9 @@ allure serve allure-results
 | Menu Navigation | ✅ PASS | Side menu functionality |
 | Product Filtering | ✅ PASS | Sort products by price |
 
-### Report Examples
+---
+
+### 📊 Report Examples
 
 #### Jenkins Build
 
