@@ -102,7 +102,7 @@ allure serve allure-results
 
 ### 📊 Report Examples
 
-#### Jenkins Build
+#### [Jenkins](https://jenkins.autotests.cloud/job/UI_DIPLOMA/) Build
 
 ![Jenkins Build](readme_media/jenkins_build.png)
 
@@ -112,13 +112,13 @@ allure serve allure-results
 #### Test Details
 ![Test Details](readme_media/test_details.png)
 
-#### TestOps Runs
+#### [TestOps](https://allure.autotests.cloud/project/5033/dashboards) Runs
 ![TestOps Runs](readme_media/testops_runs.png)
 
 #### TestOps Test Cases
 ![TestOps Test Cases](readme_media/testops_details.png)
 
-#### Jira Integration
+#### [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1555) Integration
 ![Jira Integration](readme_media/jira_integration.png)
 
 
