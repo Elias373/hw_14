@@ -116,7 +116,7 @@ allure serve allure-results
 
 ---
 
-## [Jenkins](https://jenkins.autotests.cloud/job/UI_DIPLOMA/) Build
+### [Jenkins](https://jenkins.autotests.cloud/job/UI_DIPLOMA/) Build
 ![Jenkins Build](readme_media/jenkins_build.png)
 
 ---
@@ -126,7 +126,7 @@ allure serve allure-results
 ![Allure Report](readme_media/allure_overview.png)
 
 #### Test Details
-![Test Details](readme_media/test_details.png)
+![Test Details](readme_media/tests_details.png)
 
 #### [TestOps](https://allure.autotests.cloud/project/5033/dashboards) Runs
 ![TestOps Runs](readme_media/testops_runs.png)

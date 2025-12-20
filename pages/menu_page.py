@@ -14,7 +14,6 @@ class MenuPage:
         return self
 
 
-
     def should_have_items(self, *expected_items):
         browser.all('.bm-item-list a').should(have.exact_texts(*expected_items))
         return self
